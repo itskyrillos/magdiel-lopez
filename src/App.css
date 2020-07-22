@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+body {
+    /* border: 2px solid #0000ff; */
+    overflow: hidden;
+    isolation: isolate;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    /* border: 2px solid red; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    font-weight: 500;
+    font-size: 10em;
+    z-index: 5;
+    mix-blend-mode: soft-light;
+
+    /* border: 2px solid green; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.astronaut {
+    z-index: 2;
 }
 
-.App-link {
-  color: #61dafb;
+.astronautImg {
+    position: absolute;
+    height: 500px;
+    top: 30%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all 0.2 ease-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bird {
+    z-index: 3;
+}
+
+.birdImg {
+    position: absolute;
+    height: 150px;
+    width: auto;
+
+    top: 23%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: all 0.2 ease-out;
+}
+
+.background {
+    z-index: 1;
+    isolation: isolate;
+}
+
+.background img {
+    position: absolute;
+    height: 1000px;
+    width: auto;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    isolation: isolate;
 }
